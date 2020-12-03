@@ -1,0 +1,30 @@
+{
+  "layer_1": {
+    "neuron_1": {
+      "id": "1_1",
+      "weights": [[-0.27]],
+      "inputs": [[1]],
+      "bias": [[-0.48]],
+      "transfer_function": "sigmoid",
+      "transfer_function_derivative": "sigmoid_deri"
+    },
+    "neuron_2": {
+      "id": "1_2",
+      "weights": [[-0.41]],
+      "inputs": [[1]],
+      "bias": [[-0.13]],
+      "transfer_function": "sigmoid",
+      "transfer_function_derivative": "sigmoid_deri"
+    }
+  },
+  "layer_2": {
+    "neuron_1": {
+      "id": "2_1",
+      "weights": [[0.09, -0.17]],
+      "inputs": 0,
+      "bias": [[0.48]],
+      "transfer_function": "pureline",
+      "transfer_function_derivative": "pureline_deri"
+    }
+  }
+}
