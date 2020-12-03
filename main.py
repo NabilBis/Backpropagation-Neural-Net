@@ -53,7 +53,7 @@ def training_data():
 
 
 if __name__ == "__main__":
-    net_paramters = open('net_parameters.json', "r")
+    net_paramters = open('./net_parameters.json', "r")
     data = json.loads(net_paramters.read())
     net_layers = set_net_layers(data)
 
