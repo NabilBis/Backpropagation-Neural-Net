@@ -4,7 +4,7 @@ This given neural network illustrate the use of a **backpropagation's algorithm*
 
         g(x)= 1 + sin((π/4)*x);  -2≤x≤2
 
-**NOTE :** the coding of this algorithm follows the explanation provided in this book ![Neural  Network Design](https://hagan.okstate.edu/NNDesign.pdf) (Chapter 11).
+**NOTE :** the coding of this algorithm follows the explanation provided in this book [Neural Network Design](https://hagan.okstate.edu/NNDesign.pdf) (Chapter 11).
 
 ## Neural network's Architecture
 
@@ -20,7 +20,7 @@ It consists of :
   - Neurons : 1.
   - Transfer function: **Pureline function**.
 
-![Network's Architecture](https://www.google.com/search?q=backpropagation%201%2021&tbm=isch&safe=strict&tbs=rimg:CSsqq5EsZaP8YYKErDQOLb1X&hl=en&sa=X&ved=0CBsQuIIBahcKEwig_YTL17LtAhUAAAAAHQAAAAAQCA&biw=1280&bih=647#imgrc=DTkOng8KehR3uM)
+![Network's Architecture](https://images.squarespace-cdn.com/content/v1/51d342a0e4b0290bcc56387d/1414538430117-013J6OBJRLNJORGFCEUD/ke17ZwdGBToddI8pDm48kNGhvwK1dHyJEVTMYsDQT29Zw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpyuNHSz5nMm54PQVFA1hE7KfIV1CslcfaIkUKLdPzeHlsm0QOROT0AAQiev9IOwSsI/image-asset.png)
 
 ## Code
 
@@ -37,6 +37,8 @@ One or more neurons combined form a layer, respectively two or more layers combi
 ```
 
 The main class(entry point to build and run the net) reads from **"net_parameters.json"** to build the network . This file contains the neurons parameters for each layer.
+
+**NOTE :** Initial parameters are randomly set.
 
 ```js
 "layer_1": {
