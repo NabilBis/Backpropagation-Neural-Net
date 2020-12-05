@@ -24,6 +24,9 @@ class Neural_Net:
 
             return dic
 
+        for neuron in layer.neurons:
+            neuron.inputs = inp
+
         layer_outputs = layer.activate_layer()
 
         for neuron in self.layers[index+1].neurons:
@@ -43,13 +46,8 @@ class Neural_Net:
         return dic
 
     def train_net(self, training_data):
-        i = 1
         for entry in training_data:
-            #             print(i)
-            for input_layer_neurons in self.layers[0].neurons:
-                input_layer_neurons.inputs = entry['input']
             t = self.backpropagate(entry['input'], entry['target'])
-            i += 1
 
     def approximate(self, inp, index=0):
         layer = self.layers[index]
@@ -57,6 +55,9 @@ class Neural_Net:
         if index == len(self.layers) - 1:
             result = layer.activate_layer()
             return result
+
+        for neuron in layer.neurons:
+            neuron.inputs = inp
 
         layer_outputs = layer.activate_layer()
 
