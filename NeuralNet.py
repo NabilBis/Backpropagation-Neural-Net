@@ -12,6 +12,9 @@ class Neural_Net:
         dic = {}
 
         if index == len(self.layers) - 1:
+
+            for neuron in layer.neurons:
+                neuron.inputs = inp
             dic['layer_output'] = layer.activate_layer()
             dic['sensivity'] = layer.sensivity(upfront_weights=None,
                                                upfront_sensivity=None,
@@ -28,9 +31,6 @@ class Neural_Net:
             neuron.inputs = inp
 
         layer_outputs = layer.activate_layer()
-
-        for neuron in self.layers[index+1].neurons:
-            neuron.inputs = layer_outputs
 
         upfront_result = self.backpropagate(layer_outputs, target, index+1)
 
@@ -53,6 +53,8 @@ class Neural_Net:
         layer = self.layers[index]
 
         if index == len(self.layers) - 1:
+            for neuron in layer.neurons:
+                neuron.inputs = inp
             result = layer.activate_layer()
             return result
 
@@ -61,8 +63,5 @@ class Neural_Net:
 
         layer_outputs = layer.activate_layer()
 
-        for neuron in self.layers[index+1].neurons:
-            neuron.inputs = layer_outputs
-
-        result = self.approximate(layer_outputs, index+1)
-        return result
+        rr = self.approximate(layer_outputs, index+1)
+        return rr
